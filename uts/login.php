@@ -7,26 +7,31 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-if(isset($_POST['submit'])){
-   $email = $_POST['email'];
-   $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = sha1($_POST['pass']);
-   $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-   $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
-   $select_user->execute([$email, $pass]);
-   $row = $select_user->fetch(PDO::FETCH_ASSOC);
-   $rand = substr(uniqid(), 5);
-   $captcha = $_POST['captcha'];
-   $confirmcaptcha = $_POST['confirmcaptcha'];
+$rand = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 7);
 
-   if($captcha != $confirmcaptcha) {
-      echo "<script> alert('Incorrect Captcha'); </script>";
-   }else if($select_user->rowCount() > 0) {
-      $_SESSION['user_id'] = $row['id'];
-      header('location:index.php');
-   }else{
-      $message[] = 'Incorrect Username or Password!';
-   }
+if (isset($_POST['submit'])) {
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $pass = $_POST['pass'];
+    $captcha = $_POST['captcha'];
+    $confirmcaptcha = $_POST['confirmcaptcha'];
+    
+
+    if ($captcha != $confirmcaptcha) {
+        echo "<script>alert('Incorrect Captcha');</script>";
+    } else {
+        $pass = sha1($pass);
+        $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
+        $select_user->execute([$email, $pass]);
+        $row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+        if ($select_user->rowCount() > 0) {
+            session_regenerate_id(true);
+            $_SESSION['user_id'] = $row['id'];
+            header('location: index.php');
+        } else {
+            $message[] = 'Incorrect Username or Password!';
+        }
+    }
 }
 ?>
 

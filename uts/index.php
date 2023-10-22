@@ -34,7 +34,7 @@ include 'components/add_cart.php';
                <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="images/ramen-1.jpg" alt="">
+               <img src="images/ramen-carousel.png" alt="">
             </div>
          </div>
          <div class="swiper-slide slide">
@@ -44,7 +44,7 @@ include 'components/add_cart.php';
                <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="images/sushi-1.jpg" alt="">
+               <img src="images/sushi-carousel.png" alt="">
             </div>
          </div>
          <div class="swiper-slide slide">
@@ -54,7 +54,7 @@ include 'components/add_cart.php';
                <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="images/taiyaki.jpg" alt="">
+               <img src="images/taiyaki-carousel.png" alt="">
             </div>
          </div>
          <div class="swiper-slide slide">
@@ -64,7 +64,7 @@ include 'components/add_cart.php';
                <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="images/gyoza.jpg" alt="">
+               <img src="images/gyoza-carousel.png" alt="">
             </div>
          </div>
       </div>

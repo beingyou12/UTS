@@ -9,6 +9,10 @@
    --border:.2rem solid var(--black);
 }
 
+body {
+   background-color: #fdf1d3;
+}
+
 .description {
    font-size: 16px;
    margin-top: 10px;

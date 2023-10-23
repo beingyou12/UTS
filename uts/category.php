@@ -23,7 +23,21 @@ include 'components/add_cart.php';
 <?php include 'components/user_header.php'; ?>
 
 <section class="products">
-   <h1 class="title">Food Category</h1>
+   <h1 class="title"><?php
+      $category = isset($_GET['category']) ? $_GET['category'] : '';
+
+      if ($category === 'ramen') {
+         echo 'Ramen Category';
+      } elseif ($category === 'sushi') {
+         echo 'Sushi Category';
+      } elseif ($category === 'drinks') {
+         echo 'Drinks Category';
+      } elseif ($category === 'desserts') {
+         echo 'Desserts Category';
+      } else {
+         echo 'Food Category'; 
+      }
+      ?></h1>
    <div class="box-container">
       <?php
          $category = $_GET['category'];

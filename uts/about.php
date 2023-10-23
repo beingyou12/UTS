@@ -84,7 +84,7 @@ if(isset($_SESSION['user_id'])){
          </div>
          <div class="swiper-slide slide">
             <img src="images/teuku.jpeg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <p>Aku CINTA WebProg!</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -92,7 +92,7 @@ if(isset($_SESSION['user_id'])){
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>Teuku Fazariz</h3>
+            <h3>Teuku Fazariz B.</h3>
          </div>
          <div class="swiper-slide slide">
             <img src="images/arya.png" alt="">

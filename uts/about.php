@@ -87,7 +87,7 @@ if(isset($_SESSION['user_id'])){
          </div>
          <div class="swiper-slide slide">
             <img src="images/riffa.jpeg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <p>Why fall in love, when you can fall asleep.</p>
             <h3>Riffa Putra</h3>
          </div>
       </div>

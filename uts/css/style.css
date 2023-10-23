@@ -204,9 +204,21 @@ label {
    position: relative;
 }
 
-.header .flex .logo{
+.header .flex .logo {
    font-size: 2.5rem;
    color: #cf8018;
+   background-color: #151a1f; 
+   padding: 10px 20px;
+   border-radius: 10px; 
+   display: inline-block; 
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+   transition: background-color 0.3s, color 0.3s; 
+   cursor: pointer; 
+}
+
+.header .flex .logo:hover {
+   background-color: #cf8018; 
+   color: #222; 
 }
 
 .header .flex .navbar a{

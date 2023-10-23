@@ -604,6 +604,7 @@ label {
    height: 10rem;
    width: 10rem;
    border-radius: 50%;
+   object-fit: cover;
 }
 
 .reviews .slide p{

@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
          <option value="Female">Female</option>
       </select>   
       <input type="email" name="email" required placeholder="Enter Your Email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="number" name="number" required placeholder="Enter Your Number" class="box" min="0" max="9999999999" maxlength="10">
+      <input type="number" name="number" required placeholder="Enter Your Number" class="box" min="0" max="999999999999999" maxlength="15">
       <input type="password" name="pass" required placeholder="Enter Your Password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" required placeholder="Confirm Your Password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="register now" name="submit" class="btn">

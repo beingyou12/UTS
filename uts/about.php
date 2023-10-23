@@ -96,7 +96,7 @@ if(isset($_SESSION['user_id'])){
          </div>
          <div class="swiper-slide slide">
             <img src="images/arya.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <p>Instance Daily Antiseptic Hand Sanitizer Liquid membersihkan tangan tanpa menyentuh  tanpa air dan sabun. Jadi saya seorang Manusia</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>

@@ -1084,6 +1084,10 @@ label {
    .flex-btn{
       flex-flow: column;
       gap:0;
-   }   
-
+   }
+   .error-text{
+      font-size: 18px;
+   }
 }
+
+

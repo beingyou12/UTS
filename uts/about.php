@@ -77,17 +77,17 @@ if(isset($_SESSION['user_id'])){
          </div>
          <div class="swiper-slide slide">
             <img src="images/teuku.jpeg" alt="">
-            <p>Aku CINTA WebProg!</p>
+            <p>Aku CINTA WebProg!<br></br></p>
             <h3>Teuku Fazariz B.</h3>
          </div>
          <div class="swiper-slide slide">
             <img src="images/arya.png" alt="">
-            <p>Instance Daily Antiseptic Hand Sanitizer Liquid membersihkan tangan tanpa menyentuh  tanpa air dan sabun. Jadi saya seorang Manusia</p>
+            <p>Saya seorang Manusia<br></br></p>
             <h3>Arya Reswara</h3>
          </div>
          <div class="swiper-slide slide">
             <img src="images/riffa.jpeg" alt="">
-            <p>Why fall in love, when you can fall asleep.</p>
+            <p>Why fall in love, when you can fall asleep.<br></br></p>
             <h3>Riffa Putra</h3>
          </div>
       </div>

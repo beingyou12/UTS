@@ -17,22 +17,20 @@ if (isset($_POST['submit'])) {
     
 
     if ($captcha != $confirmcaptcha) {
-        echo "<script>alert('Incorrect Captcha');</script>";
+        $message = 'Incorrect Captcha';
     } else {
         $pass = sha1($pass);
         $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
         $select_user->execute([$email, $pass]);
         $row = $select_user->fetch(PDO::FETCH_ASSOC);
 
-        // Inside your PHP code, where you have the message
         if ($select_user->rowCount() > 0) {
-        session_regenerate_id(true);
-        $_SESSION['user_id'] = $row['id'];
-        header('location: index.php');
+            session_regenerate_id(true);
+            $_SESSION['user_id'] = $row['id'];
+            header('location: index.php');
         } else {
             $message = 'Incorrect Username or Password!';
-            }
-
+        }
     }
 }
 ?>
@@ -47,14 +45,27 @@ if (isset($_POST['submit'])) {
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="css/style.css">
+   <style>
+    a {
+        text-decoration: none;
+    }
+
+    .error-text {
+        color: white;
+        background-color: #f44336;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    
+    </style>
 </head>
 <body>
 <?php include 'components/user_header.php'; ?>
 <br>
-<div class="container">
+<div class="alertbox" style="<?php echo isset($message) ? 'display: block;' : 'display: none;'; ?>">
     <div class="row">
         <div class="col-md-6 offset-md-3 text-center">
-            <div class="error-message alert alert-danger">
+            <div>
                 <?php
                 if (isset($message)) {
                     echo '<p class="error-text">' . $message . '</p>';
@@ -64,7 +75,6 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </div>
-
 <section class="form-container">
    <form action="" method="post">
       <h3>login now</h3>

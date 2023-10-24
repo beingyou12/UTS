@@ -198,7 +198,7 @@ label {
    position: sticky;
    top:0; left:0; right:0;
    z-index: 1000;
-   background-color: #fdf1d3;
+   background-color: var(--white);
    border-bottom: var(--border);
    border-color: #ad611a;
 }
